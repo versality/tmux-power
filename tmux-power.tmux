@@ -117,7 +117,7 @@ if [[ $prefix_highlight_pos == 'L' || $prefix_highlight_pos == 'LR' ]]; then
 fi
 tmux_set status-left "$LS"
 
-set-option -g status-right ""
+tmux_set status-right ""
 
 # Window status format
 tmux_set window-status-format         "#[fg=$BG,bg=$G06]$rarrow#[fg=$TC,bg=$G06] #I:#W#F #[fg=$G06,bg=$BG]$rarrow"

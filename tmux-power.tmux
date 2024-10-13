@@ -1,12 +1,5 @@
 #!/usr/bin/env bash
-#===============================================================================
-#   Author: Wenxuan
-#    Email: wenxuangm@gmail.com
-#  Created: 2018-04-05 17:37
-#===============================================================================
 
-# $1: option
-# $2: default value
 tmux_get() {
     local value="$(tmux show -gqv "$1")"
     [ -n "$value" ] && echo "$value" || echo "$2"
@@ -21,19 +14,7 @@ tmux_set() {
 # Options
 rarrow=$(tmux_get '@tmux_power_right_arrow_icon' '')
 larrow=$(tmux_get '@tmux_power_left_arrow_icon' '')
-upload_speed_icon=$(tmux_get '@tmux_power_upload_speed_icon' '󰕒')
-download_speed_icon=$(tmux_get '@tmux_power_download_speed_icon' '󰇚')
-session_icon="$(tmux_get '@tmux_power_session_icon' '')"
-user_icon="$(tmux_get '@tmux_power_user_icon' '')"
-time_icon="$(tmux_get '@tmux_power_time_icon' '')"
-date_icon="$(tmux_get '@tmux_power_date_icon' '')"
-show_upload_speed="$(tmux_get @tmux_power_show_upload_speed false)"
-show_download_speed="$(tmux_get @tmux_power_show_download_speed false)"
-show_web_reachable="$(tmux_get @tmux_power_show_web_reachable false)"
-prefix_highlight_pos=$(tmux_get @tmux_power_prefix_highlight_pos)
-time_format=$(tmux_get @tmux_power_time_format '%T')
-date_format=$(tmux_get @tmux_power_date_format '%F')
-# short for Theme-Colour
+
 TC='#7da36d'
 
 G01=#000000 #232
